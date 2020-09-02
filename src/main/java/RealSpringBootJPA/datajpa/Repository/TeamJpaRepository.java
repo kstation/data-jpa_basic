@@ -9,8 +9,9 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.Optional;
 
+//순수 JPA 기반 레파지토리
 @Repository
-public class TeamRepository {
+public class TeamJpaRepository {
 
     //JPA의 EntityManager를 Injection해주는 Annotation
     @PersistenceContext
