@@ -1,5 +1,6 @@
 package RealSpringBootJPA.datajpa.Repository;
 
+import RealSpringBootJPA.datajpa.dto.MemberDto;
 import RealSpringBootJPA.datajpa.entity.Member;
 import RealSpringBootJPA.datajpa.entity.Team;
 import org.assertj.core.api.Assertions;
@@ -16,8 +17,6 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import java.util.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional

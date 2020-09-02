@@ -1,12 +1,12 @@
 package RealSpringBootJPA.datajpa.Repository;
 
+import RealSpringBootJPA.datajpa.dto.MemberDto;
 import RealSpringBootJPA.datajpa.entity.Member;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.query.Param;
 
-import javax.persistence.Entity;
 import javax.persistence.LockModeType;
 import javax.persistence.QueryHint;
 import java.util.List;
@@ -36,7 +36,7 @@ public interface MemberRepository extends JpaRepository<Member, Long>, MemberRep
     List<String> findUsernameList();
 
     //Dto로 직접 조회
-    @Query("select new RealSpringBootJPA.datajpa.Repository.MemberDto(m.id, m.username, t.name)"
+    @Query("select new RealSpringBootJPA.datajpa.dto.MemberDto(m.id, m.username, t.name)"
             + "from Member m join m.team t")
     List<MemberDto> findMemberDto();
 
